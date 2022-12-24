@@ -10,6 +10,5 @@ public interface PermissionRepository {
     void updateRolePermission(Long id, String name);
     void removeRolePermission(Long id);
     List<Permission> readRolePermissions();
-
     Permission findPermissionById(Long id);
 }

@@ -60,63 +60,66 @@ public class App {
 
 
     public static void main( String[] args ) {
-        UserService userService= Context.getUserService();
-        RoleService roleService = Context.getRoleService();
-        PermissionService permissionService = Context.getPermissionService();
-        logger.info("welcome to Digipay Management System!"+ '\n' + "Select the number of main sector");
-        logger.info("1- user operations" +'\n'+ "2- role operation"+ '\n'+ "3- permission operation");
-        int entryCommand = scanner.nextInt();
-
-        if(entryCommand == 1) {
-            logger.info("plz select one item" + '\n' + "1- create user" + '\n' + "2- list all users" + '\n' +
-                    "3- update a user" + '\n' + "4- delete a user");
-            int userCommand = scanner.nextInt();
-
-            if(userCommand == 1)
-                getUserInfo();
-            else if(userCommand == 2)
-                logger.info("{}", userService.displayUser());
-            else if(userCommand == 3)
-                userService.updateUser(2L,"staff");
-            else if(userCommand == 4)
-                userService.removeUser(2L);
-            return;
-        }
-
-        else if(entryCommand == 2){
-            logger.info("plz select one item" + '\n' + "1- create role" + '\n' + "2- list all roles" + '\n' +
-                    "3- update a role" + '\n' + "4- delete a role");
-            int roleCommand = scanner.nextInt();
-
-            if(roleCommand == 1)
-                getRoleInfo();
-
-            else if(roleCommand == 2)
-                logger.info("{}",roleService.displayUserRole());
-
-            else if(roleCommand == 3)
-                roleService.updateUserRole(2L,"staff");
-
-            else if(roleCommand == 4)
-                roleService.removeUserRole(1L);
-        }
-
-        else if(entryCommand == 3){
-            logger.info("plz select one item" + '\n' + "1- create permission" + '\n' + "2- list all permissions" + '\n' +
-                    "3- update a permission" + '\n' + "4- delete a permission");
-            int permissionCommand = scanner.nextInt();
-
-            if(permissionCommand == 1) {
-                System.out.println("Enter the Permission title please");
-                String permissionTitle = scanner.next();
-                permissionService.createPermission(permissionTitle);
+//        UserService userService= Context.getUserService();
+//        RoleService roleService = Context.getRoleService();
+//        PermissionService permissionService = Context.getPermissionService();
+//        logger.info("welcome to Digipay Management System!"+ '\n' + "Select the number of main sector");
+//        logger.info("1- user operations" +'\n'+ "2- role operation"+ '\n'+ "3- permission operation");
+//        int entryCommand = scanner.nextInt();
+//
+//        if(entryCommand == 1) {
+//            logger.info("plz select one item" + '\n' + "1- create user" + '\n' + "2- list all users" + '\n' +
+//                    "3- update a user" + '\n' + "4- delete a user");
+//           /int userCommand = scanner.nextInt();
+//
+//            if(userCommand == 1)
+//                getUserInfo();
+//            else if(userCommand == 2)
+//                logger.info("{}", userService.displayUser());
+//            else if(userCommand == 3)
+//                userService.updateUser(2L,"staff");
+//            else if(userCommand == 4)
+//                userService.removeUser(2L);
+//
+           Boolean key= Boolean.TRUE;
+            while (key) {
             }
-            else if(permissionCommand == 2)
-                logger.info("{}",permissionService.displayPermission());
-            else if(permissionCommand == 3)
-                permissionService.updatePermission(2L,"deploy");
-            else if(permissionCommand == 4)
-                permissionService.removePermission(52L);
         }
-    }
+
+//        else if(entryCommand == 2){
+//            logger.info("plz select one item" + '\n' + "1- create role" + '\n' + "2- list all roles" + '\n' +
+//                    "3- update a role" + '\n' + "4- delete a role");
+//            int roleCommand = scanner.nextInt();
+//
+//            if(roleCommand == 1)
+//                getRoleInfo();
+//
+//            else if(roleCommand == 2)
+//                logger.info("{}",roleService.displayUserRole());
+//
+//            else if(roleCommand == 3)
+//                roleService.updateUserRole(2L,"staff");
+//
+//            else if(roleCommand == 4)
+//                roleService.removeUserRole(1L);
+//        }
+//
+//        else if(entryCommand == 3){
+//            logger.info("plz select one item" + '\n' + "1- create permission" + '\n' + "2- list all permissions" + '\n' +
+//                    "3- update a permission" + '\n' + "4- delete a permission");
+//            int permissionCommand = scanner.nextInt();
+//
+//            if(permissionCommand == 1) {
+//                System.out.println("Enter the Permission title please");
+//                String permissionTitle = scanner.next();
+//                permissionService.createPermission(permissionTitle);
+//            }
+//            else if(permissionCommand == 2)
+//                logger.info("{}",permissionService.displayPermission());
+//            else if(permissionCommand == 3)
+//                permissionService.updatePermission(2L,"deploy");
+//            else if(permissionCommand == 4)
+//                permissionService.removePermission(52L);
+//        }
+//    }
 }
